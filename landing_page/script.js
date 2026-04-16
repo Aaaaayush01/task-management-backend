@@ -163,3 +163,31 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
+
+// BUTTON ACTIONS
+// ================================
+
+document.getElementById("loginBtn")?.addEventListener("click", () => {
+  window.location.href = "login.html";
+});
+
+document.getElementById("signupBtn")?.addEventListener("click", () => {
+  window.location.href = "signup.html";
+});
+
+document.querySelectorAll(".pricing-card .btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("Redirecting to payment / signup");
+  });
+});
+document.querySelector(".cta .btn")?.addEventListener("click", () => {
+  window.location.href = "signup.html";
+});
+
+document.querySelector(".btn-outline").onclick = () => {
+  window.location.href = "login.html";
+};
+
+document.querySelector(".btn-primary").onclick = () => {
+  window.location.href = "signup.html";
+};

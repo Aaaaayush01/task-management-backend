@@ -1,216 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TaskForge — Organize Your Work. Master Your Time.</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskForge — Organize Your Work. Master Your Time.</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <div class="logo">⚡ TaskForge</div>
+
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#why">Why Us</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#" id="loginBtn" class="btn btn-outline">Login</a>
+          <a href="#" id="signupBtn" class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>
+            Organize your tasks.<br />
+            <span class="highlight">Master your productivity.</span>
+          </h1>
+
+          <p>
+            TaskForge helps you manage projects, track progress, and stay
+            focused — all in one powerful workspace.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary btn-lg">Get Started Free</a>
+            <a href="#" class="btn btn-secondary btn-lg">Live Demo</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>10k+</strong>
+              <span>Tasks Managed</span>
+            </div>
+            <div>
+              <strong>5k+</strong>
+              <span>Users</span>
+            </div>
+            <div>
+              <strong>99%</strong>
+              <span>Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Everything you need to stay productive</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>📌 Smart Task Management</h3>
+            <p>
+              Create, edit, and organize tasks with ease using an intuitive
+              interface.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>📊 Progress Tracking</h3>
+            <p>
+              Visualize your progress with subtasks, completion stats, and
+              insights.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>⚡ Drag & Drop Workflow</h3>
+            <p>
+              Move tasks seamlessly across stages with a smooth Kanban board.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🎯 Priority Focus</h3>
+            <p>
+              Filter tasks by priority and stay focused on what matters most.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🌙 Dark Mode</h3>
+            <p>Work comfortably anytime with a beautiful dark/light theme.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🔍 Powerful Search</h3>
+            <p>Instantly find tasks using smart search and filters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY US ================= -->
+    <section id="why" class="why">
+      <div class="container why-content">
+        <div class="why-text">
+          <h2>Why TaskForge?</h2>
+
+          <ul>
+            <li>✔ Simple yet powerful UI</li>
+            <li>✔ Faster than traditional task apps</li>
+            <li>✔ No clutter, just productivity</li>
+            <li>✔ Built for students, developers & teams</li>
+          </ul>
+
+          <a href="#" class="btn btn-primary">Start Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2 class="section-title">Simple Pricing</h2>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <p class="price">₹0</p>
+            <ul>
+              <li>✔ Unlimited tasks</li>
+              <li>✔ Basic features</li>
+            </ul>
+            <a href="#" class="btn btn-outline">Get Started</a>
+          </div>
+
+          <div class="pricing-card popular">
+            <h3>Pro</h3>
+            <p class="price">₹199/mo</p>
+            <ul>
+              <li>✔ Cloud sync</li>
+              <li>✔ Collaboration</li>
+              <li>✔ Analytics</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Upgrade</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta">
+      <div class="container cta-content">
+        <h2>Start organizing your life today</h2>
+        <p>No credit card required. Get started in seconds.</p>
+
+        <a href="#" class="btn btn-primary btn-lg">Sign Up Free</a>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-left">
+          <h3>TaskForge</h3>
+          <p>Built for productivity and focus.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
-
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <div class="container nav-content">
-      <div class="logo">
-        ⚡ TaskForge
-      </div>
-
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#why">Why Us</a>
-        <a href="#pricing">Pricing</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="#" class="btn btn-outline">Login</a>
-        <a href="#" class="btn btn-primary">Sign Up</a>
-      </div>
-    </div>
-  </header>
-
-
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="container hero-content">
-
-      <div class="hero-text">
-        <h1>
-          Organize your tasks.<br />
-          <span class="highlight">Master your productivity.</span>
-        </h1>
-
-        <p>
-          TaskForge helps you manage projects, track progress, and stay focused —
-          all in one powerful workspace.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#" class="btn btn-primary btn-lg">Get Started Free</a>
-          <a href="#" class="btn btn-secondary btn-lg">Live Demo</a>
-        </div>
-
-        <div class="hero-stats">
-          <div>
-            <strong>10k+</strong>
-            <span>Tasks Managed</span>
-          </div>
-          <div>
-            <strong>5k+</strong>
-            <span>Users</span>
-          </div>
-          <div>
-            <strong>99%</strong>
-            <span>Satisfaction</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="assets/dashboard.png" alt="TaskForge Dashboard Preview">
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= FEATURES ================= -->
-  <section id="features" class="features">
-    <div class="container">
-
-      <h2 class="section-title">Everything you need to stay productive</h2>
-
-      <div class="features-grid">
-
-        <div class="feature-card">
-          <h3>📌 Smart Task Management</h3>
-          <p>Create, edit, and organize tasks with ease using an intuitive interface.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>📊 Progress Tracking</h3>
-          <p>Visualize your progress with subtasks, completion stats, and insights.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>⚡ Drag & Drop Workflow</h3>
-          <p>Move tasks seamlessly across stages with a smooth Kanban board.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>🎯 Priority Focus</h3>
-          <p>Filter tasks by priority and stay focused on what matters most.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>🌙 Dark Mode</h3>
-          <p>Work comfortably anytime with a beautiful dark/light theme.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>🔍 Powerful Search</h3>
-          <p>Instantly find tasks using smart search and filters.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= WHY US ================= -->
-  <section id="why" class="why">
-    <div class="container why-content">
-
-      <div class="why-text">
-        <h2>Why TaskForge?</h2>
-
-        <ul>
-          <li>✔ Simple yet powerful UI</li>
-          <li>✔ Faster than traditional task apps</li>
-          <li>✔ No clutter, just productivity</li>
-          <li>✔ Built for students, developers & teams</li>
-        </ul>
-
-        <a href="#" class="btn btn-primary">Start Now</a>
-      </div>
-
-      <div class="why-image">
-        <img src="assets/preview.png" alt="App Preview">
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= PRICING ================= -->
-  <section id="pricing" class="pricing">
-    <div class="container">
-
-      <h2 class="section-title">Simple Pricing</h2>
-
-      <div class="pricing-grid">
-
-        <div class="pricing-card">
-          <h3>Free</h3>
-          <p class="price">₹0</p>
-          <ul>
-            <li>✔ Unlimited tasks</li>
-            <li>✔ Basic features</li>
-          </ul>
-          <a href="#" class="btn btn-outline">Get Started</a>
-        </div>
-
-        <div class="pricing-card popular">
-          <h3>Pro</h3>
-          <p class="price">₹199/mo</p>
-          <ul>
-            <li>✔ Cloud sync</li>
-            <li>✔ Collaboration</li>
-            <li>✔ Analytics</li>
-          </ul>
-          <a href="#" class="btn btn-primary">Upgrade</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= CTA ================= -->
-  <section class="cta">
-    <div class="container cta-content">
-
-      <h2>Start organizing your life today</h2>
-      <p>No credit card required. Get started in seconds.</p>
-
-      <a href="#" class="btn btn-primary btn-lg">Sign Up Free</a>
-
-    </div>
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="container footer-content">
-
-      <div class="footer-left">
-        <h3>TaskForge</h3>
-        <p>Built for productivity and focus.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </div>
-
-    </div>
-  </footer>
-
-</body>
+  </body>
 </html>
