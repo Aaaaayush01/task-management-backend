@@ -394,15 +394,6 @@ function addSubtask() {
   input.focus();
 }
 
-const logoutBtn = document.getElementById("logoutBtn");
-
-if (logoutBtn) {
-  logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem("token");
-    window.location.href = "../auth/login.html";
-  });
-}
-
 // ── SELECTORS ─────────────────────────
 function setActivePriority(p) {
   $$('#prioritySelector .priority-btn').forEach(btn => {
@@ -505,6 +496,15 @@ document.addEventListener('keydown', e => {
 
 // ── EVENT WIRING ──────────────────────
 function init() {
+
+  const logoutBtn = $('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("token");
+      window.location.href = "../auth/login.html";
+    });
+  }
+
   load();
   applyTheme(state.theme);
   renderProjects();
@@ -627,7 +627,7 @@ function checkDueDates() {
 
 
 function addTask(text) {
-  fetch("http://localhost:5000/tasks", {
+  fetch(`${BASE_URL}/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -638,14 +638,9 @@ function addTask(text) {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      alert("Task added");
+      console.log("Task added");
     });
 }
-
-document.getElementById("logoutBtn").addEventListener("click", () => {
-  localStorage.removeItem("token");
-  window.location.href = "../auth/login.html";
-});
 
 
 // ── BOOT ──────────────────────────────
