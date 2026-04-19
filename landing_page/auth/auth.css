@@ -72,3 +72,16 @@
   color: #6366f1;
   text-decoration: none;
 }
+
+.message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.message.success {
+  color: #10b981;
+}
+
+.message.error {
+  color: #ef4444;
+}
