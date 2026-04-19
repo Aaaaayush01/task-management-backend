@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APEX — Task Manager</title>
+  <title>TaskForge — Task Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <div class="sidebar-header">
       <div class="logo">
         <span class="logo-mark">▲</span>
-        <span class="logo-text">APEX</span>
+        <span class="logo-text">TaskForge</span>
       </div>
       <button class="theme-toggle" id="themeToggle" title="Toggle theme">
         <span class="theme-icon">◐</span>
@@ -61,7 +61,7 @@
       <div class="topbar-left">
         <button class="sidebar-toggle" id="sidebarToggle">☰</button>
         <div class="breadcrumb">
-          <span class="breadcrumb-app">APEX</span>
+          <span class="breadcrumb-app">TaskForge</span>
           <span class="breadcrumb-sep">›</span>
           <span class="breadcrumb-project" id="breadcrumbProject">Select a project</span>
         </div>
@@ -81,7 +81,7 @@
         <button class="btn-add-task" id="btnAddTask">
           <span>+</span> Add Task
         </button>
-        <button id="logoutBtn">Logout</button>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
       </div>
       
     </header>
@@ -163,7 +163,7 @@
       </div>
       <div class="modal-body">
         <label class="field-label">Project Name</label>
-        <input class="field-input" id="projectNameInput" type="text" placeholder="e.g. Website Redesign" maxlength="50" />
+        <input class="field-input" id="projectNameInput" type="text" placeholder="e.g. My First Project" maxlength="50" />
         <label class="field-label" style="margin-top:1.2rem">Color Tag</label>
         <div class="color-picker" id="projectColorPicker">
           <button class="color-swatch active" data-color="#F59E0B" style="background:#F59E0B"></button>

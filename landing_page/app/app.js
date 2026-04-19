@@ -1,5 +1,4 @@
 /* ═══════════════════════════════════════
-   APEX TASK MANAGER — app.js
 ═══════════════════════════════════════ */
 const BASE_URL = "https://task-management-backend-uw8d.onrender.com";
 'use strict';
@@ -24,7 +23,7 @@ const $$ = (sel) => document.querySelectorAll(sel);
 
 // ── PERSISTENCE ────────────────────────
 function save() {
-  localStorage.setItem('apex_state', JSON.stringify({
+  localStorage.setItem('taskforge_state', JSON.stringify({
     projects: state.projects,
     tasks:    state.tasks,
     activeProjectId: state.activeProjectId,
@@ -34,7 +33,7 @@ function save() {
 
 function load() {
   try {
-    const raw = localStorage.getItem('apex_state');
+    const raw = localStorage.getItem('taskforge_state');
     if (!raw) return seedDemo();
     const saved = JSON.parse(raw);
     state.projects       = saved.projects       || [];
@@ -49,8 +48,8 @@ function load() {
 function seedDemo() {
   const pid = uid();
   state.projects = [
-    { id: pid,     name: 'Website Redesign', color: '#F59E0B' },
-    { id: uid(),   name: 'Mobile App MVP',   color: '#8B5CF6' },
+    { id: pid,   name: 'My First Project', color: '#F59E0B' },
+    { id: uid(), name: 'Personal Tasks',   color: '#8B5CF6' },
   ];
   state.tasks = [
     { id: uid(), projectId: pid, title: 'Audit current site structure',   desc: 'Review IA, heuristics, and analytics.', priority: 'high',   status: 'done',       due: '', subtasks: [] },
@@ -650,6 +649,11 @@ function addTask(text) {
       alert("Task added");
     });
 }
+
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  localStorage.removeItem("token");
+  window.location.href = "../auth/login.html";
+});
 
 
 // ── BOOT ──────────────────────────────
