@@ -47,21 +47,13 @@ function load() {
 
 function seedDemo() {
   const pid = uid();
+
   state.projects = [
-    { id: pid,   name: 'My First Project', color: '#F59E0B' },
-    { id: uid(), name: 'Personal Tasks',   color: '#8B5CF6' },
+    { id: pid, name: 'Tasks', color: '#8B5CF6' }
   ];
-  state.tasks = [
-    { id: uid(), projectId: pid, title: 'Audit current site structure',   desc: 'Review IA, heuristics, and analytics.', priority: 'high',   status: 'done',       due: '', subtasks: [] },
-    { id: uid(), projectId: pid, title: 'Create new component library',   desc: 'Design system tokens, buttons, cards.',  priority: 'high',   status: 'inprogress', due: '', subtasks: [
-      { id: uid(), text: 'Typography scale', done: true },
-      { id: uid(), text: 'Color tokens',     done: true },
-      { id: uid(), text: 'Button variants',  done: false },
-    ]},
-    { id: uid(), projectId: pid, title: 'Write copy for homepage hero',   desc: 'Headline, subhead, and CTA copy.',       priority: 'medium', status: 'inprogress', due: '', subtasks: [] },
-    { id: uid(), projectId: pid, title: 'Responsive QA across devices',   desc: 'Test on iOS, Android, and all breakpoints.', priority: 'medium', status: 'pending', due: '', subtasks: [] },
-    { id: uid(), projectId: pid, title: 'SEO meta tags & sitemap',        desc: 'Ensure all pages have proper meta.',     priority: 'low',    status: 'pending',    due: '', subtasks: [] },
-  ];
+
+  state.tasks = [];
+
   state.activeProjectId = pid;
 }
 
