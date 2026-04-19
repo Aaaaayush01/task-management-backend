@@ -1,4 +1,7 @@
 const BASE_URL = "https://task-management-backend-uw8d.onrender.com";
+
+const message = document.getElementById("message");
+
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -9,22 +12,27 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const res = await fetch(`${BASE_URL}/login`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password })
     });
 
     const data = await res.json();
 
-    if (res.ok) {
-  localStorage.setItem("token", data.token);
-  alert("Login successful");
-  window.location.href = "../app/dashboard.html";
-} else {
-      alert(data.msg);
+    if (data.token) {
+      // Save token
+      localStorage.setItem("token", data.token);
+
+      // Instant redirect (no popup)
+      window.location.href = "../app/dashboard.html";
+    } else {
+      message.textContent = data.msg || "Invalid credentials";
+      message.className = "message error";
     }
+
   } catch (err) {
-    alert("Server error");
+    message.textContent = "Server error";
+    message.className = "message error";
     console.log(err);
   }
 });

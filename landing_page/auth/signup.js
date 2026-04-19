@@ -1,4 +1,7 @@
 const BASE_URL = "https://task-management-backend-uw8d.onrender.com";
+
+const message = document.getElementById("message");
+
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -15,10 +18,22 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     });
 
     const data = await res.json();
-    alert(data.msg);
+
+    if (data.msg === "User already exists") {
+      message.innerHTML = 'User already exists. <a href="login.html">Login instead</a>';
+      message.className = "message error";
+    } else {
+      message.textContent = "Signup successful! Redirecting...";
+      message.className = "message success";
+
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 1000);
+    }
 
   } catch (err) {
-    alert("Server error");
+    message.textContent = "Server error";
+    message.className = "message error";
     console.log(err);
   }
 });
