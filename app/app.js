@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════
    APEX TASK MANAGER — app.js
 ═══════════════════════════════════════ */
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://task-management-backend-uw8d.onrender.com";
 'use strict';
 
 // ── STATE ──────────────────────────────

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://task-management-backend-uw8d.onrender.com";
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
