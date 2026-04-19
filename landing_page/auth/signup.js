@@ -19,17 +19,18 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
     const data = await res.json();
 
-    if (data.msg === "User already exists") {
-      message.innerHTML = 'User already exists. <a href="login.html">Login instead</a>';
+    if (!res.ok) {
+      message.innerHTML = data.msg + '. <a href="login.html">Login instead</a>';
       message.className = "message error";
-    } else {
-      message.textContent = "Signup successful! Redirecting...";
-      message.className = "message success";
-
-      setTimeout(() => {
-        window.location.href = "login.html";
-      }, 1000);
+      return;
     }
+
+    message.textContent = "Signup successful! Redirecting...";
+    message.className = "message success";
+
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 1000);
 
   } catch (err) {
     message.textContent = "Server error";
