@@ -1,0 +1,74 @@
+/* ===== AUTH PAGES ===== */
+
+.auth-body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-container {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.auth-container h2 {
+  margin-bottom: 10px;
+  color: #f1f5f9;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: #fff;
+  outline: none;
+}
+
+.auth-container input::placeholder {
+  color: #94a3b8;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #6366f1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-container button:hover {
+  background: #4f46e5;
+}
+
+.switch {
+  margin-top: 15px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #6366f1;
+  text-decoration: none;
+}

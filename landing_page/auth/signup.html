@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Signup</title>
+  <link rel="stylesheet" href="auth.css" />
 </head>
-<body>
+<body class="auth-body">
 
-<h2>Sign Up</h2>
+  <div class="auth-container">
+    <h2>Create Account</h2>
+    <p class="subtitle">Start managing your tasks</p>
 
-<form id="signupForm">
-  <input id="email" type="email" placeholder="Email" required />
-  <br /><br />
-  <input id="password" type="password" placeholder="Password" required />
-  <br /><br />
-  <button type="submit">Sign Up</button>
-</form>
+    <form id="signupForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
 
-<p>Already have an account? <a href="login.html">Login</a></p>
+      <button type="submit">Sign Up</button>
+    </form>
 
-<script src="signup.js"></script>
+    <p class="switch">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+  </div>
+
+  <script src="signup.js"></script>
 </body>
 </html>
