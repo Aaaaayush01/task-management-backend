@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════
    APEX TASK MANAGER — app.js
 ═══════════════════════════════════════ */
-
+const BASE_URL = "http://localhost:5000";
 'use strict';
 
 // ── STATE ──────────────────────────────
@@ -366,7 +366,7 @@ function toggleDone(id) {
 }
 
 
-fetch("http://localhost:5000/dashboard", {
+fetch(`${BASE_URL}/dashboard`, {
   headers: {
     Authorization: token
   }
