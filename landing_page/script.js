@@ -168,7 +168,7 @@ window.addEventListener("load", () => {
 // ================================
 
 document.getElementById("loginBtn")?.addEventListener("click", () => {
-  window.location.href = "../auth/login.html";
+  window.location.href = "auth/login.html";
 });
 
 document.getElementById("signupBtn")?.addEventListener("click", () => {
@@ -185,9 +185,9 @@ document.querySelector(".cta .btn")?.addEventListener("click", () => {
 });
 
 document.querySelector(".btn-outline").onclick = () => {
-  window.location.href = "../auth/login.html";
+  window.location.href = "auth/login.html";
 };
 
 document.querySelector(".btn-primary").onclick = () => {
-  window.location.href = "../auth/signup.html";
+  window.location.href = "auth/signup.html";
 };
